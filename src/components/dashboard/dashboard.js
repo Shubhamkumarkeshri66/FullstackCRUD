@@ -8,7 +8,7 @@ const Dashboard = () => {
   
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/v1/getallbook");
+      const response = await fetch("https://crudbackend-1xyc.onrender.com/api/v1/getallbook");
       const data = await response.json();
       if (Array.isArray(data)) {
         setUsers(data);
@@ -27,7 +27,7 @@ const Dashboard = () => {
     console.log(userId);
     try {
       const response = await fetch(
-        `http://localhost:3000/api/v1/deletebook/${userId}`,
+        `https://crudbackend-1xyc.onrender.com/api/v1/deletebook/${userId}`,
         {
           method: "DELETE",
         }

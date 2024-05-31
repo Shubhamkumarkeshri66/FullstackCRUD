@@ -25,7 +25,7 @@ const UpdateUser = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/getonebook/${id}`);
+        const response = await fetch(`https://crudbackend-1xyc.onrender.com/api/v1/getonebook/${id}`);
         const data = await response.json();
         setFormData(data);
         console.log(data);
@@ -40,7 +40,7 @@ const UpdateUser = () => {
   const submitHandler= async(e)=>{
            e.preventDefault();
            try {
-            const response = await axios.put(`http://localhost:3000/api/v1/updatebook/${id}`, formData);
+            const response = await axios.put(`https://crudbackend-1xyc.onrender.com/api/v1/updatebook/${id}`, formData);
             console.log("Book updated:", response.data);
               navigate("/")
             // Handle success, e.g., display a message, redirect, etc.

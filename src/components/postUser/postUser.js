@@ -21,7 +21,7 @@ const PostUser = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/v1/addbook", {
+      const response = await fetch("https://crudbackend-1xyc.onrender.com/api/v1/addbook", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
